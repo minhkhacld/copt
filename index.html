@@ -29,17 +29,29 @@
 
 <body>
     <div class="container">
+        <div class="row" class="header">
+            <h1>COT, COPT & WIP COLLECTION APP</h1>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="">Mục cập nhật</label>
+                <select class="form-control" name="" id="area" onchange="showDiv(this)">
+                    <option value="copt">COPT & COT</option>
+                    <option value="wip">WIP</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Form COPT & COT -->
         <form id="test-form" name="myForm"
             action="https://script.google.com/macros/s/AKfycby8tRStuPqRGhStQi8_7scIFAkofMUEuZfsF2nFTFQT--oCY4U/exec"
             method="GET">
-            <div class="row" class="header">
-                <h1>COT & COPT COLLECTION APP</h1>
-            </div>
+
             <!-- Nhập Date -->
             <div class="row">
                 <div class="form-group">
                     <label for="">Nhập ngày/Date</label>
-                    <input type="text" class="form-control" name="Date" id="" aria-describedby="helpId"
+                    <input type="date" class="form-control" name="Date" id="" aria-describedby="helpId"
                         placeholder="Nhập Ngày">
                 </div>
             </div>
@@ -50,7 +62,7 @@
                     <!-- <input type="text" class="form-control" name="Factory" id="" aria-describedby="helpId"
                         placeholder="Nhập Khu vực"> -->
                     <select class="form-control" name="Factory" id="">
-                        <option value=""></option>
+                        <option value="">Chọn khu vực</option>
                         <option value="P2">P2</option>
                         <option value="P3">P3</option>
                     </select>
@@ -75,16 +87,16 @@
             <!-- Nhập Thời gian bắt đầu -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Bắt đầu/Start (Vd: 10:25 AM)</label>
-                    <input type="time" class="form-control" name="StartTime" id="start" aria-describedby="helpId"
+                    <label for="">Bắt đầu/Start (Vd: 19/10/2020 10:50 AM)</label>
+                    <input type="datetime-local" class="form-control" name="StartTime" id="start" aria-describedby="helpId"
                         placeholder="Nhập giờ bắt đầu">
                 </div>
             </div>
             <!-- Nhập Thời gian kết thúc -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Kết thúc/End (Vd: 10:50 AM)</label>
-                    <input type="time" class="form-control" name="EndTime" id="end" aria-describedby="helpId"
+                    <label for="">Kết thúc/End (Vd: 20/10/2020 10:50 AM)</label>
+                    <input type="datetime-local" class="form-control" name="EndTime" id="end" aria-describedby="helpId"
                         placeholder="Nhập giờ kết thúc">
                 </div>
             </div>
@@ -117,17 +129,113 @@
             </div>
             <div class="row">
                 <!-- <iframe src=""></iframe> -->
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxnDuAS8SrOev-xG7_VmCd_rtOMe3NMSoK-XvlgMzNIkm2-PUayWAKWOd7FfAyXWX54p31bmP1iikt/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-            </div>
-            <div class="row">
-                <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham <i
-                        class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
-                        class="far fa-envelope"
-                        style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
-                </h6>
-            </div>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxnDuAS8SrOev-xG7_VmCd_rtOMe3NMSoK-XvlgMzNIkm2-PUayWAKWOd7FfAyXWX54p31bmP1iikt/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>            
         </form>
+
+        <!-- ----------------------------------------------------------------------- -->
+        <!-- Form WIP -->
+        <form id="formwip"
+            action="https://script.google.com/macros/s/AKfycbw1DCn85Tgq8wdIB70s7KL2xafXADyKKhGFpt_L0u1tfgvDfdE0/exec"
+            method="get" style="display:none">
+
+            <!-- Nhập Date -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Nhập ngày/Date</label>
+                    <input type="datetime-local" class="form-control" name="Date" id="" aria-describedby="helpId"
+                        placeholder="Nhập Ngày">
+                </div>
+            </div>
+            <!-- Nhập Khu vực -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Khu vực/Factory</label>
+                    <!-- <input type="text" class="form-control" name="Factory" id="" aria-describedby="helpId"
+                        placeholder="Nhập Khu vực"> -->
+                    <select class="form-control" name="Factory" id="">
+                        <option value="">Chọn khu vực</option>
+                        <option value="P2">P2</option>
+                        <option value="P3">P3</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Nhập line -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Tên Chuyền/Line</label>
+                    <input type="text" class="form-control" name="Line" id="line" aria-describedby="helpId"
+                        placeholder="Nhập số chuyền">
+                </div>
+            </div>
+            <!-- Nhập Style -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Mã hàng/Style</label>
+                    <input type="text" class="form-control" name="Style" id="" aria-describedby="helpId"
+                        placeholder="Nhập Mã hàng">
+                </div>
+            </div>
+            <!-- Nhập WIP -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">WIP</label>
+                    <input type="text" class="form-control" name="WIP" id="" aria-describedby="helpId"
+                        placeholder="Nhập WIP">
+                </div>
+            </div>
+            <!-- Nhập Ghi chú -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Ghi chú/remark</label>
+                    <textarea class="form-control" name="Remark" id="" rows="3" placeholder="Nhập Ghi chú"></textarea>
+                </div>
+            </div>
+            <!-- Submit -->
+            <div class="row">
+                <button type="submit" id="btn" class="btn">Cập Nhật</button>
+            </div>     
+            <div class="row">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxnDuAS8SrOev-xG7_VmCd_rtOMe3NMSoK-XvlgMzNIkm2-PUayWAKWOd7FfAyXWX54p31bmP1iikt/pubhtml?widget=true&amp;headers=true"></iframe>
+            </div>     
+        </form>        
+        <div class="row">
+            <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham <i
+                    class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                    class="far fa-envelope"
+                    style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+            </h6>
+        </div>
+
+
+
     </div>
+
+    <!-- <script>
+        area.onchange = () => {
+            var khuvuc = document.getElementById("area").value;
+            console.log(khuvuc);
+            // if (khuvuc = "wip") {
+            //     document.getElementById("test-form").style.display = "none";
+            //     // document.getElementById("formwip").style.display = "block";
+            // }
+            // if (khuvuc = "copt") {
+            //     document.getElementById("test-form").style.display = "block";
+            //     // document.getElementById("formwip").style.display = "none";  // }
+        }
+    </script> -->
+
+    <script type="text/javascript">
+        function showDiv(select) {
+            if (select.value == "copt") {
+                document.getElementById('test-form').style.display = "block";
+                document.getElementById('formwip').style.display = "none";
+            } else {
+                document.getElementById('formwip').style.display = "block";
+                document.getElementById('test-form').style.display = "none";
+            }
+        } 
+    </script>
 </body>
 
 </html>
