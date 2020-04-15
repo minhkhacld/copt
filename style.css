@@ -11,7 +11,8 @@
     }
     .container-fluid{
         width: 100% !important;
-        display: inline-block;       
+        display: inline-block !important; 
+        /* float: inline-end !important;       */
     }
 }
 .container{
@@ -95,4 +96,9 @@ ul {
   
   .active {
     background-color: #4CAF50;
+  }
+  .container-fluid{
+    /* position: -webkit-sticky; */
+    position: sticky !important;
+    top: 0;
   }
