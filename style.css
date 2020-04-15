@@ -12,6 +12,7 @@
     .container-fluid{
         width: 100% !important;
         display: inline-block;
+        font-size: 25px;
     }
 }
 .container{
