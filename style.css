@@ -11,6 +11,7 @@
     }
     .container-fluid{
         width: 100% !important;
+        display: inline-block;
     }
 }
 .container{
