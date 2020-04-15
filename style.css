@@ -11,8 +11,7 @@
     }
     .container-fluid{
         width: 100% !important;
-        display: inline-block;
-        font-size: 25px;
+        display: inline-block;       
     }
 }
 .container{
@@ -75,6 +74,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-size: 13px !important;   
   }
   
   li {
@@ -85,7 +85,7 @@ ul {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 14px;
     text-decoration: none;
   }
   
