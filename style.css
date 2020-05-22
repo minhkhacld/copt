@@ -15,7 +15,7 @@
         /* float: inline-end !important;       */
     }
     .link{
-     
+        
         text-align: center !important;       
         font-weight: bold !important
         
@@ -109,8 +109,8 @@ ul {
     position: sticky !important;
     top: 0;
   }
-  .link{
-    margin-left:525px !important;
+  .link{  
+      float: none !important;  
     text-align: center !important;       
     font-weight: bold !important
     
