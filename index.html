@@ -104,20 +104,37 @@
                         aria-describedby="helpId" placeholder="Nhập giờ bắt đầu" required>
                 </div>
             </div>
-            <!-- Nhập Thời gian kết thúc -->
+            <!-- Nhập Thời gian kết thúc Last OP -->
             <div class="row">
                 <div class="form-group">
-                    <label for="">Kết thúc Đổi mã/End (Vd: 20/10/2020 10:50 AM)</label>
-                    <input type="datetime-local" class="form-control" name="EndTime" id="end" aria-describedby="helpId"
-                        placeholder="Nhập giờ kết thúc" required>
+                    <label for="">Sản phẩm đầu tiên (Công đoạn cuối)/End (Vd: 20/10/2020 10:50 AM)</label>
+                    <input type="datetime-local" class="form-control" name="Last_OP_Output" id="end" aria-describedby="helpId"
+                        placeholder="Nhập thời gian ra hàng sản phẩm mới" required>
+                </div>
+            </div>           
+            <!-- Nhập Thời gian kết thúc QC -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Sản phẩm đầu tiên (QC)/QC 1st output (Vd: 20/10/2020 10:50 AM)</label>
+                    <input type="datetime-local" class="form-control" name="QC_Output" id="end" aria-describedby="helpId"
+                        placeholder="Nhập thời gian ra QC_Output" required>
                 </div>
             </div>
+
              <!-- Nhập Thời gian kết thúc -->
              <div class="row">
                 <div class="form-group">
                     <label for="">Kết thúc Mã cũ/End (Vd: 20/10/2020 10:00 AM)</label>
                     <input type="datetime-local" class="form-control" name="EndTimeOldStyle" id="end" aria-describedby="helpId"
                         placeholder="Nhập giờ kết thúc" required>
+                </div>
+            </div>
+             <!-- Nhập WIP QC -->
+             <div class="row">
+                <div class="form-group">
+                    <label for="">WIP QC</label>
+                    <input type="text" class="form-control" name="QC_WIP_OldStyle" id="end" aria-describedby="helpId"
+                        placeholder="Nhập số lượng QC WIP" required>
                 </div>
             </div>
             <!-- Nhập COT -->
